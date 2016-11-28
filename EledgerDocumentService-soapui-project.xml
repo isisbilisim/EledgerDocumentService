@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="ca9b71a9-b657-4250-b718-5dc7a5c22377" activeEnvironment="Default" name="EledgerDocumentService" resourceRoot="" soapui-version="5.2.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="5f4fa966-f88c-4380-af44-b0821a0b7e52" wsaVersion="NONE" name="BasicHttpBinding_IEledgerDocumentService" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_IEledgerDocumentService" soapVersion="1_1" anonymous="optional" definition="http://edeftertest.isisbilisim.com.tr/services/eledger/EledgerDocumentService.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://edeftertest.isisbilisim.com.tr/services/eledger/EledgerDocumentService.svc?wsdl"><con:part><con:url>http://edeftertest.isisbilisim.com.tr/services/eledger/EledgerDocumentService.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="EledgerDocumentService" targetNamespace="http://isisbilisim.com.tr/services/eledger" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:i0="http://tempuri.org/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://isisbilisim.com.tr/services/eledger" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://edeftertest.isisbilisim.com.tr/services/eledger/EledgerDocumentService.svc?wsdl=wsdl0"/>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://isisbilisim.com.tr/services/eledger/Imports">
+      <xsd:import schemaLocation="http://edeftertest.isisbilisim.com.tr/services/eledger/EledgerDocumentService.svc?xsd=xsd0" namespace="http://isisbilisim.com.tr/services/eledger"/>
+      <xsd:import schemaLocation="http://edeftertest.isisbilisim.com.tr/services/eledger/EledgerDocumentService.svc?xsd=xsd1" namespace="http://microsoft.com/wsdl/types/"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEledgerDocumentService_sendDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:sendDocument"/>
+  </wsdl:message>
+  <wsdl:message name="IEledgerDocumentService_sendDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sendDocumentResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IEledgerDocumentService_getLedger_InputMessage">
+    <wsdl:part name="parameters" element="tns:getLedger"/>
+  </wsdl:message>
+  <wsdl:message name="IEledgerDocumentService_getLedger_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getLedgerResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IEledgerDocumentService_getReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:getReport"/>
+  </wsdl:message>
+  <wsdl:message name="IEledgerDocumentService_getReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getReportResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IEledgerDocumentService_getLedgerList_InputMessage">
+    <wsdl:part name="parameters" element="tns:getLedgerList"/>
+  </wsdl:message>
+  <wsdl:message name="IEledgerDocumentService_getLedgerList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getLedgerListResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IEledgerDocumentService_getReportList_InputMessage">
+    <wsdl:part name="parameters" element="tns:getReportList"/>
+  </wsdl:message>
+  <wsdl:message name="IEledgerDocumentService_getReportList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getReportListResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IEledgerDocumentService_removeDone_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeDone"/>
+  </wsdl:message>
+  <wsdl:message name="IEledgerDocumentService_removeDone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeDoneResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IEledgerDocumentService_receiveDone_InputMessage">
+    <wsdl:part name="parameters" element="tns:receiveDone"/>
+  </wsdl:message>
+  <wsdl:message name="IEledgerDocumentService_receiveDone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:receiveDoneResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IEledgerDocumentService">
+    <wsdl:operation name="sendDocument">
+      <wsdl:input wsaw:Action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/sendDocument" message="tns:IEledgerDocumentService_sendDocument_InputMessage"/>
+      <wsdl:output wsaw:Action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/sendDocumentResponse" message="tns:IEledgerDocumentService_sendDocument_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="getLedger">
+      <wsdl:input wsaw:Action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/getLedger" message="tns:IEledgerDocumentService_getLedger_InputMessage"/>
+      <wsdl:output wsaw:Action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/getLedgerResponse" message="tns:IEledgerDocumentService_getLedger_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="getReport">
+      <wsdl:input wsaw:Action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/getReport" message="tns:IEledgerDocumentService_getReport_InputMessage"/>
+      <wsdl:output wsaw:Action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/getReportResponse" message="tns:IEledgerDocumentService_getReport_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="getLedgerList">
+      <wsdl:input wsaw:Action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/getLedgerList" message="tns:IEledgerDocumentService_getLedgerList_InputMessage"/>
+      <wsdl:output wsaw:Action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/getLedgerListResponse" message="tns:IEledgerDocumentService_getLedgerList_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="getReportList">
+      <wsdl:input wsaw:Action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/getReportList" message="tns:IEledgerDocumentService_getReportList_InputMessage"/>
+      <wsdl:output wsaw:Action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/getReportListResponse" message="tns:IEledgerDocumentService_getReportList_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="removeDone">
+      <wsdl:input wsaw:Action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/removeDone" message="tns:IEledgerDocumentService_removeDone_InputMessage"/>
+      <wsdl:output wsaw:Action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/removeDoneResponse" message="tns:IEledgerDocumentService_removeDone_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="receiveDone">
+      <wsdl:input wsaw:Action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/receiveDone" message="tns:IEledgerDocumentService_receiveDone_InputMessage"/>
+      <wsdl:output wsaw:Action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/receiveDoneResponse" message="tns:IEledgerDocumentService_receiveDone_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="EledgerDocumentService">
+    <wsdl:port name="BasicHttpBinding_IEledgerDocumentService" binding="i0:BasicHttpBinding_IEledgerDocumentService">
+      <soap:address location="http://edeftertest.isisbilisim.com.tr/services/eledger/EledgerDocumentService.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://edeftertest.isisbilisim.com.tr/services/eledger/EledgerDocumentService.svc?wsdl=wsdl0</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:i0="http://isisbilisim.com.tr/services/eledger" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:import namespace="http://isisbilisim.com.tr/services/eledger" location="http://edeftertest.isisbilisim.com.tr/services/eledger/EledgerDocumentService.svc?wsdl"/>
+  <wsdl:types/>
+  <wsdl:binding name="BasicHttpBinding_IEledgerDocumentService" type="i0:IEledgerDocumentService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="sendDocument">
+      <soap:operation soapAction="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/sendDocument" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLedger">
+      <soap:operation soapAction="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/getLedger" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReport">
+      <soap:operation soapAction="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/getReport" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLedgerList">
+      <soap:operation soapAction="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/getLedgerList" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReportList">
+      <soap:operation soapAction="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/getReportList" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeDone">
+      <soap:operation soapAction="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/removeDone" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="receiveDone">
+      <soap:operation soapAction="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/receiveDone" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://edeftertest.isisbilisim.com.tr/services/eledger/EledgerDocumentService.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://isisbilisim.com.tr/services/eledger" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://isisbilisim.com.tr/services/eledger">
+  <xs:import schemaLocation="http://edeftertest.isisbilisim.com.tr/services/eledger/EledgerDocumentService.svc?xsd=xsd1" namespace="http://microsoft.com/wsdl/types/"/>
+  <xs:element name="sendDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="identifier" type="xs:string"/>
+        <xs:element minOccurs="0" maxOccurs="1" name="fileName" type="xs:string"/>
+        <xs:element minOccurs="0" maxOccurs="1" name="binaryData" type="xs:base64Binary"/>
+        <xs:element minOccurs="1" maxOccurs="1" name="documentType" type="tns:LedgerFileType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="LedgerFileType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="IMPORT_CSV"/>
+      <xs:enumeration value="IMPORT_ISIS_CSV2"/>
+      <xs:enumeration value="EXPORT_CSV"/>
+      <xs:enumeration value="EXPORT_XLSX"/>
+      <xs:enumeration value="XBRL_PDF"/>
+      <xs:enumeration value="XBRL_PDF3"/>
+      <xs:enumeration value="XBRL_PDF4"/>
+      <xs:enumeration value="BERAT_PDF"/>
+      <xs:enumeration value="LEGAL_LEDGER"/>
+      <xs:enumeration value="IMPORT_BERAT"/>
+      <xs:enumeration value="LEDGER_CONTROL"/>
+      <xs:enumeration value="LEDGER_ANALIZ"/>
+      <xs:enumeration value="LEDGER_ERROR"/>
+      <xs:enumeration value="LEDGER_WARNING"/>
+      <xs:enumeration value="IMPORT_XBRL_TO_CSV"/>
+      <xs:enumeration value="DIRECT_XBRL"/>
+      <xs:enumeration value="SNDENV_BERAT"/>
+      <xs:enumeration value="GETENV_BERAT"/>
+      <xs:enumeration value="GETSTTENV_BERAT"/>
+      <xs:enumeration value="SEARCH_QUERY_XBRL"/>
+      <xs:enumeration value="SEARCH_QUERY_CSV"/>
+      <xs:enumeration value="SEARCH_QUERY_PDF"/>
+      <xs:enumeration value="SEARCH_RESULT"/>
+      <xs:enumeration value="REPORT_MIZAN"/>
+      <xs:enumeration value="REPORT_BILANCO"/>
+      <xs:enumeration value="RESULT_EXCEL"/>
+      <xs:enumeration value="RESULT_JSON"/>
+      <xs:enumeration value="NETSIS_EXCEL"/>
+      <xs:enumeration value="KESIT_CSV"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="sendDocumentResponse">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="getLedger">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="identifier" type="xs:string"/>
+        <xs:element minOccurs="0" maxOccurs="1" name="fileName" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLedgerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="resultDocumentType" type="tns:DocumentType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DocumentType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="identifier" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="batchID" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="uniqueID" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="rowGuid" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="fileName" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="documentType" type="xs:string"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="status" type="xs:int"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="statusMessage" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="hash" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="hashByte" type="xs:base64Binary"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="FullInfo" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="resultMessage" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="binaryData" type="xs:base64Binary"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="size" type="xs:decimal"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="periodCoveredStart" type="xs:dateTime"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="periodCoveredEnd" type="xs:dateTime"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="createDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="partNumber" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="recordPeriod" type="xs:string"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="fiscalYear" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="identifier" type="xs:string"/>
+        <xs:element minOccurs="1" maxOccurs="1" name="RowGuid" type="q1:guid" xmlns:q1="http://microsoft.com/wsdl/types/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="resultDocumentType" type="tns:DocumentType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLedgerList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="identifier" type="xs:string"/>
+        <xs:element minOccurs="0" maxOccurs="1" name="batchID" type="xs:string"/>
+        <xs:element minOccurs="1" maxOccurs="1" name="startDate" type="xs:dateTime"/>
+        <xs:element minOccurs="1" maxOccurs="1" name="endDate" type="xs:dateTime"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLedgerListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="resultDocumentTypeList" type="tns:ArrayOfDocumentType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfDocumentType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentType" nillable="true" type="tns:DocumentType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getReportList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="identifier" type="xs:string"/>
+        <xs:element minOccurs="0" maxOccurs="1" name="batchID" type="xs:string"/>
+        <xs:element minOccurs="1" maxOccurs="1" name="startDate" type="xs:dateTime"/>
+        <xs:element minOccurs="1" maxOccurs="1" name="endDate" type="xs:dateTime"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getReportListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="resultDocumentTypeList" type="tns:ArrayOfDocumentType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="removeDone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="identifier" type="xs:string"/>
+        <xs:element minOccurs="0" maxOccurs="1" name="rowGuid" type="xs:string"/>
+        <xs:element minOccurs="0" maxOccurs="1" name="hash" type="xs:string"/>
+        <xs:element minOccurs="1" maxOccurs="1" name="documentTypeCode" type="tns:DocumentTypeCode"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="DocumentTypeCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Y"/>
+      <xs:enumeration value="K"/>
+      <xs:enumeration value="YB"/>
+      <xs:enumeration value="KB"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="removeDoneResponse">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="receiveDone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="identifier" type="xs:string"/>
+        <xs:element minOccurs="0" maxOccurs="1" name="rowGuid" type="xs:string"/>
+        <xs:element minOccurs="0" maxOccurs="1" name="hash" type="xs:string"/>
+        <xs:element minOccurs="0" maxOccurs="1" name="erpReferenceNumber" type="xs:string"/>
+        <xs:element minOccurs="1" maxOccurs="1" name="documentTypeCode" type="tns:DocumentTypeCode"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="receiveDoneResponse">
+    <xs:complexType/>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://edeftertest.isisbilisim.com.tr/services/eledger/EledgerDocumentService.svc?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://microsoft.com/wsdl/types/">
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://edeftertest.isisbilisim.com.tr/services/eledger/EledgerDocumentService.svc</con:endpoint></con:endpoints><con:operation id="4dc269d3-799b-4d22-ad5d-d1c7a94befba" isOneWay="false" action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/getLedger" name="getLedger" bindingOperationName="getLedger" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="934ddcf5-11f7-4e99-8771-97c625ebfbee" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://edeftertest.isisbilisim.com.tr/services/eledger/EledgerDocumentService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:eled="http://isisbilisim.com.tr/services/eledger">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <eled:getLedger>\r
+         <!--Optional:-->\r
+         <eled:identifier>?</eled:identifier>\r
+         <!--Optional:-->\r
+         <eled:fileName>?</eled:fileName>\r
+      </eled:getLedger>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/getLedger"/></con:call></con:operation><con:operation id="549ff320-e616-4633-945a-f68ce20417f2" isOneWay="false" action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/getLedgerList" name="getLedgerList" bindingOperationName="getLedgerList" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="06fe33b7-e0c7-4b11-a996-f23d86d72d9e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://edeftertest.isisbilisim.com.tr/services/eledger/EledgerDocumentService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:eled="http://isisbilisim.com.tr/services/eledger">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <eled:getLedgerList>\r
+         <!--Optional:-->\r
+         <eled:identifier>?</eled:identifier>\r
+         <!--Optional:-->\r
+         <eled:batchID>?</eled:batchID>\r
+         <eled:startDate>?</eled:startDate>\r
+         <eled:endDate>?</eled:endDate>\r
+      </eled:getLedgerList>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/getLedgerList"/></con:call></con:operation><con:operation id="6ed21be7-50fa-43eb-bc98-88c411195c14" isOneWay="false" action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/getReport" name="getReport" bindingOperationName="getReport" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a6a48940-d276-4430-8118-a37f90c9e3c1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://edeftertest.isisbilisim.com.tr/services/eledger/EledgerDocumentService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:eled="http://isisbilisim.com.tr/services/eledger">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <eled:getReport>\r
+         <!--Optional:-->\r
+         <eled:identifier>?</eled:identifier>\r
+         <eled:RowGuid>?</eled:RowGuid>\r
+      </eled:getReport>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/getReport"/></con:call></con:operation><con:operation id="5ca67440-4d27-4291-9aa0-7831d73e41a4" isOneWay="false" action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/getReportList" name="getReportList" bindingOperationName="getReportList" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3831400e-b982-4465-9a35-6fdbfc445920" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://edeftertest.isisbilisim.com.tr/services/eledger/EledgerDocumentService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:eled="http://isisbilisim.com.tr/services/eledger">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <eled:getReportList>\r
+         <!--Optional:-->\r
+         <eled:identifier>?</eled:identifier>\r
+         <!--Optional:-->\r
+         <eled:batchID>?</eled:batchID>\r
+         <eled:startDate>?</eled:startDate>\r
+         <eled:endDate>?</eled:endDate>\r
+      </eled:getReportList>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/getReportList"/></con:call></con:operation><con:operation id="5422e486-7d06-436b-b2a7-d93761fc46d4" isOneWay="false" action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/receiveDone" name="receiveDone" bindingOperationName="receiveDone" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f18b6abd-930c-4b39-b4a5-53391b8961c1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://edeftertest.isisbilisim.com.tr/services/eledger/EledgerDocumentService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:eled="http://isisbilisim.com.tr/services/eledger">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <eled:receiveDone>\r
+         <!--Optional:-->\r
+         <eled:identifier>?</eled:identifier>\r
+         <!--Optional:-->\r
+         <eled:rowGuid>?</eled:rowGuid>\r
+         <!--Optional:-->\r
+         <eled:hash>?</eled:hash>\r
+         <!--Optional:-->\r
+         <eled:erpReferenceNumber>?</eled:erpReferenceNumber>\r
+         <eled:documentTypeCode>?</eled:documentTypeCode>\r
+      </eled:receiveDone>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/receiveDone"/></con:call></con:operation><con:operation id="81b829c1-c7cd-42a7-8463-155cb3925885" isOneWay="false" action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/removeDone" name="removeDone" bindingOperationName="removeDone" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dc19cde2-b566-4c3b-a160-b0e203cbaaaa" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://edeftertest.isisbilisim.com.tr/services/eledger/EledgerDocumentService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:eled="http://isisbilisim.com.tr/services/eledger">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <eled:removeDone>\r
+         <!--Optional:-->\r
+         <eled:identifier>?</eled:identifier>\r
+         <!--Optional:-->\r
+         <eled:rowGuid>?</eled:rowGuid>\r
+         <!--Optional:-->\r
+         <eled:hash>?</eled:hash>\r
+         <eled:documentTypeCode>?</eled:documentTypeCode>\r
+      </eled:removeDone>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/removeDone"/></con:call></con:operation><con:operation id="3c4f098b-21f1-4545-ae23-7883ba6f4a7f" isOneWay="false" action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/sendDocument" name="sendDocument" bindingOperationName="sendDocument" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f0eb0d09-38ba-4177-a080-72d839b5e1ec" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://edeftertest.isisbilisim.com.tr/services/eledger/EledgerDocumentService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:eled="http://isisbilisim.com.tr/services/eledger">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <eled:sendDocument>\r
+         <!--Optional:-->\r
+         <eled:identifier>4660392430</eled:identifier>\r
+         <!--Optional:-->\r
+         <eled:fileName>ARV-2710788108-201607-YK-000002.zip</eled:fileName>\r
+         <!--Optional:-->\r
+         <eled:binaryData>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</eled:binaryData>\r
+         <eled:documentType>IMPORT_CSV</eled:documentType>\r
+      </eled:sendDocument>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>4660392430|208|ozgur.celik@isisbilisim.com.tr</con:username><con:password>Asd1234</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://isisbilisim.com.tr/services/eledger/IEledgerDocumentService/sendDocument"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
